@@ -1,0 +1,23 @@
+// CUSTOM VARIABLES
+
+$body-bg: #38383E;
+$body-color: #ccc;
+$hr-border-color: #bbb;
+$primary: #FE5D3F;
+$jumbotron-bg: #27272B;
+$jumbotron-color: #ccc;
+$headings-color: #9BD815;
+$dark: #202024;
+$navbar-dark-color: $primary;
+$navbar-dark-hover-color: rgba($primary, .75);
+$navbar-dark-active-color: $headings-color;
+$container-max-widths: (
+  sm: 600px,
+  md: 800px,
+  lg: 1000px,
+  xl: 1200px
+);
+
+// BOOTSTRAP IMPORT
+
+@import "../node_modules/bootstrap/scss/bootstrap";

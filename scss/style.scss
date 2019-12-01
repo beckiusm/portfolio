@@ -1,0 +1,162 @@
+@use "custom";
+
+/* GENERAL SETTINGS*/
+
+body {
+    padding-top: 16px;
+}
+
+p {
+    line-height: 1.5em;
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
+}
+
+h2 {
+    color: custom.$primary;
+}
+
+.lang {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.footer {
+    background: custom.$dark;
+    color: #ccc;
+    .footerList {
+        list-style-type: none;
+    }
+}
+
+#about {
+    border-bottom: 1px solid custom.$primary;
+    padding: 0;
+    .jumbotron {
+        height: 100vh;
+        margin-bottom: 0;
+    }
+}
+
+.navbar-nav img {
+    height: 25px;
+}
+
+#contact {
+    border-top: 1px solid custom.$primary;
+    background-color: custom.$jumbotron-bg;
+}
+
+@media screen and (min-width: 768px) { // large screens
+    .footerList li:not(:last-child) {
+        margin: 0 10% 0 0;
+    }
+    #about .jumbotron .container {
+        margin-top: 150px;
+        text-align: center;
+        
+    }
+    #portfolio {
+        .portfolioItem {
+            width: 80%;
+            margin: auto;
+        }
+        img {
+            height: 40%;
+            width: 40%;
+        }
+    }
+    #contact {
+        margin: auto;
+        padding: 5px;
+        height: 92vh;
+        li {
+            list-style-type: none;
+        }
+        img {
+            width: 25%;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1000px) { // medium screens
+    #portfolio {
+        width: 100%;
+        img {
+            height: 50%;
+            width: 50%;
+        }
+    }
+    #contact, #portfolio, #about {
+        h1 {
+            font-size: 45px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p.lead {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) { // mobile
+    body {
+        padding-top: 40px;
+    }
+    .navbar-nav img {
+        height: 20px;
+    }
+    p.lead {
+        font-size: 16px;
+    }
+    #about {
+        .jumbotron {
+            margin: 0!important;
+        }
+    }
+    #portfolio {
+        padding: 0;
+        .portfolioItem {
+            margin: 0!important;
+        }
+        img {
+            width: 100%;
+        }
+        .portText {
+            display: none;
+        }
+    }
+    #contact {
+        height: 88vh;
+        img {
+            width: 80%;
+        }
+    }
+    footer {
+        height: 12vh;
+    }
+}
+
+@media screen and (max-width: 360px) { // ancient mobiles
+    #about .jumbotron {
+        h1 {
+            font-size: 35px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    }
+    p.lead {
+        font-size: 15px;
+    }
+    .navbar-nav img {
+        height: 15px;
+    }
+    .btn {
+        margin: 0!important;
+        padding: 5px !important;
+    }
+}
